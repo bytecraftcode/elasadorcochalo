@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Asador Supremo - Restaurante de Carnes Premium</title>
+    
+    <!-- Importación de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de fuente (Inter) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    
+        .hero-bg {
+            /* 1. IMAGEN DE FONDO PRINCIPAL (HERO) - Pega tu URL aquí */
+            background-image: url('principal.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .reservas-bg {
+            /* 2. IMAGEN DE FONDO (SECCIÓN RESERVAS) - Pega tu URL aquí */
+            background-image: url('reservas.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <!-- Header y Navegación -->
+    <nav class="bg-black bg-opacity-80 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-wider">EL ASADOR</a>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                    <a href="#nosotros" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+                    <a href="#menu" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Menú</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                </div>
+                
+                <!-- Botón de Reserva (Desktop) -->
+                <div class="hidden md:block">
+                    <a href="#reservas" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out">
+                        Reservar Mesa
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú Móvil (oculto por ahora, para simplicidad) -->
+                <div class="md:hidden">
+                    <!-- Se podría añadir un botón de hamburguesa aquí -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header id="inicio" class="relative h-[calc(100vh-4rem)] flex items-center justify-center text-center hero-bg">
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <div class="relative z-10 p-8">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                PASIÓN POR EL FUEGO
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-8">
+                La experiencia definitiva en carnes a la parrilla, donde cada corte cuenta una historia de sabor.
+            </p>
+            <a href="#menu" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-red-700 hover:bg-red-800 transform hover:scale-105 transition duration-300 ease-in-out">
+                Ver Especialidades
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="py-20 sm:py-28 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-4">
+                        Forjados en Tradición y Sabor
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        En "El Asador", no solo servimos comida; ofrecemos una experiencia. Nacimos de la pasión por el asado perfecto, seleccionando solo las mejores carnes y tratándolas con el respeto que merecen.
+                    </p>
+                    <p class="text-lg text-gray-300">
+                        Nuestros maestros parrilleros, con décadas de experiencia, dominan el arte del fuego lento y la brasa viva para asegurar que cada bocado sea tierno, jugoso e inolvidable.
+                    </p>
+                </div>
+                <div class="mt-10 lg:mt-0">
+                    <!-- 3. IMAGEN (NOSOTROS / INTERIOR) - Pega tu URL en el atributo src="" -->
+                    <img class="rounded-lg shadow-xl w-full h-auto object-cover object-center" 
+                         src="dentro.jpg" 
+                         alt="[Imagen del interior del restaurante o de los parrilleros]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Menú (Especialidades) -->
+    <section id="menu" class="py-20 sm:py-28 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    Especialidades de la Casa
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    Cortes premium seleccionados por nuestros expertos.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Plato 1 (Estructura corregida) -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-2xl transform transition duration-300 hover:scale-105">
+                    <!-- 4. IMAGEN (PLATO 1) - Pega tu URL en el atributo src="" -->
+                    <img class="w-full h-56 object-cover" 
+                         src="tomak.jpg" 
+                         alt="[Imagen de un corte Tomahawk]">
+                    
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Tomahawk Steak (45 días)</h3>
+                        <p class="text-gray-400 mb-4">
+                            Un corte impresionante con hueso, madurado en seco durante 45 días para una máxima ternura y sabor.
+                        </p>
+                        <span class="text-xl font-semibold text-red-500">$95.00</span>
+                    </div>
+                </div>
+                
+                <!-- Plato 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-2xl transform transition duration-300 hover:scale-105">
+                    <!-- 5. IMAGEN (PLATO 2) - Pega tu URL en el atributo src="" -->
+                    <img class="w-full h-56 object-cover" 
+                         src="bife.jpg" 
+                         alt="[Imagen de un Bife de Chorizo]">
+                    
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Bife de Chorizo Argentino</h3>
+                        <p class="text-gray-400 mb-4">
+                            El clásico corte argentino. Jugoso, tierno y con una capa de grasa exterior que lo hace inconfundible.
+                        </p>
+                        <span class="text-xl font-semibold text-red-500">$68.00</span>
+                    </div>
+                </div>
+                
+                <!-- Plato 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-2xl transform transition duration-300 hover:scale-105">
+                    <!-- 6. IMAGEN (PLATO 3) - Pega tu URL en el atributo src="" -->
+                    <img class="w-full h-56 object-cover" 
+                         src="costillar.jpg" 
+                         alt="[Imagen de un costillar]">
+                    
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Costillar Asado Lento</h3>
+                        <p class="text-gray-400 mb-4">
+                            Cocido lentamente durante 8 horas en nuestro horno de leña hasta que la carne se desprende del hueso.
+                        </p>
+                        <span class="text-xl font-semibold text-red-500">$75.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reservas/Contacto -->
+    <section id="reservas" class="py-20 sm:py-28 bg-gray-900 relative reservas-bg">
+        <!-- Overlay oscuro añadido -->
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <!-- El contenido se mantiene por encima del overlay -->
+        <div class="relative z-10 max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                Reserve Su Mesa
+            </h2>
+            <p class="mt-4 text-lg text-gray-300 mb-8">
+                Le esperamos para una velada inolvidable. Contáctenos para asegurar su lugar.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-6">
+                <div class="text-lg">
+                    <span class="font-bold">Teléfono:</span>
+                    <a href="tel:+1234567890" class="text-red-500 hover:text-red-400 ml-2">+1 (234) 567-890</a>
+                </div>
+                <div class="text-lg">
+                    <span class="font-bold">Email:</span>
+                    <a href="mailto:reservas@elasador.com" class="text-red-500 hover:text-red-400 ml-2">reservas@elasador.com</a>
+                </div>
+            </div>
+             <a href="#reservas" class="mt-10 inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-red-700 hover:bg-red-800 transform hover:scale-105 transition duration-300 ease-in-out">
+                 Hacer una Reserva Online
+             </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-black text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dirección -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Dirección</h4>
+                    <p>Calle Falsa 123, Barrio Gastronómico</p>
+                    <p>Ciudad, País</p>
+                </div>
+                
+                <!-- Horarios -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Horario de Apertura</h4>
+                    <p>Lunes - Jueves: 6:00 PM - 11:00 PM</p>
+                    <p>Viernes - Domingo: 5:00 PM - 1:00 AM</p>
+                </div>
+                
+                <!-- Redes Sociales -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white transition duration-150">Facebook</a>
+                        <a href="#" class="hover:text-white transition duration-150">Instagram</a>
+                        <a href="#" class="hover:text-white transition duration-150">TripAdvisor</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="mt-12 border-t border-gray-800 pt-8 text-center">
+                <p class="text-sm">&copy; 2025 El Asador Supremo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
